@@ -20,11 +20,7 @@
                     <div class="form-group">
                         <label class="control-label col-xs-3">Asignatura</label>
                             <div class="col-xs-9">
-                                <select class="form-control" id="inputAsignatura">
-                                    <option value="Asignatura 1">#</option>
-                                    <option value="Asignatura 2">#</option>
-                                    <option value="Asignatura 3">#</option>
-                                </select>
+                                <input type="text" name="inputAsignatura" id="inputAsignatura" value="" placeholder="Asignatura.." autocomplete="off" />
                             </div>
                     </div>
                     <div class="form-group">
