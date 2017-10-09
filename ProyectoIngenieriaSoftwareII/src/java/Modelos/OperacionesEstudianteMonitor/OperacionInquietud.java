@@ -5,6 +5,9 @@
  */
 package Modelos.OperacionesEstudianteMonitor;
 
+import Modelos.CRUDEntidades.CRUDInquietud;
+import java.util.List;
+
 /**
  *
  * @author JulianCamilo
@@ -12,7 +15,8 @@ package Modelos.OperacionesEstudianteMonitor;
 public class OperacionInquietud {
     
     
-    public String crearinquietud(){
+    public String crearinquietud(List datos){
+        CRUDInquietud nuevainquietud= new CRUDInquietud();
         return "2";
     }
 }
