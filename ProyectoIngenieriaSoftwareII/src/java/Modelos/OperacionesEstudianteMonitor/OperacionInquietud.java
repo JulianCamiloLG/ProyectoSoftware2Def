@@ -11,4 +11,8 @@ package Modelos.OperacionesEstudianteMonitor;
  */
 public class OperacionInquietud {
     
+    
+    public String crearinquietud(){
+        return "2";
+    }
 }
