@@ -6,6 +6,9 @@
 package Modelos.OperacionesEstudianteMonitor;
 
 import Modelos.CRUDEntidades.CRUDInquietud;
+import Modelos.Entidades.Inquietud;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,8 +18,36 @@ import java.util.List;
 public class OperacionInquietud {
     
     
-    public String crearinquietud(List datos){
+    public int crearinquietud(int codigoestudiante,int codigoasignatura,String tema, String descp){
         CRUDInquietud nuevainquietud= new CRUDInquietud();
-        return "2";
+        Date fecha= new Date();
+        SimpleDateFormat dataformat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        int result=nuevainquietud.IngresarInquietud(codigoestudiante, codigoasignatura, tema, descp, dataformat.toString());
+        return result;
     }
+    
+    public Inquietud verinquietud(int codigoinquietud){
+        CRUDInquietud verinquietud= new CRUDInquietud();
+        Inquietud nueva= verinquietud.consultaruna(codigoinquietud);
+        return nueva;
+    }
+    
+    public void responderinquietud(){
+        
+    }
+    
+    public int eliminarinquietud(int idinquietud){
+        CRUDInquietud eliminarinquietud= new CRUDInquietud();
+        int result=eliminarinquietud.eliminarinquietud(0);
+        return result;
+    }
+    
+    public int modificar(int idinquietud,int codigoestudiante,int codigoasignatura,String tema, String descp){
+        CRUDInquietud nuevainquietud= new CRUDInquietud();
+        Date fecha= new Date();
+        SimpleDateFormat dataformat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        int result=nuevainquietud.editarInquietud(idinquietud,codigoestudiante, codigoasignatura, tema, descp, dataformat.toString());
+        return result;
+    }
+    
 }
