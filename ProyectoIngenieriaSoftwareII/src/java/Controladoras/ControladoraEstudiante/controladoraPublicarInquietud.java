@@ -41,4 +41,8 @@ public class controladoraPublicarInquietud
         mav.addObject("inquietud", new Inquietud());
         return mav;
     }
+    
+    public void prueba()
+    {
+    }
 }
