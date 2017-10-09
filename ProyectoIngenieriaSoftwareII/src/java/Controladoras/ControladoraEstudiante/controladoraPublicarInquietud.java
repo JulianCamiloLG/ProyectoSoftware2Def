@@ -42,7 +42,5 @@ public class controladoraPublicarInquietud
         return mav;
     }
     
-    public void prueba()
-    {
-    }
+    
 }
