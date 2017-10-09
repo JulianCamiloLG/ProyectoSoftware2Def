@@ -59,7 +59,7 @@ public class controladoraPublicarInquietud
             mav.addObject("inquietud", new Inquietud());
             return mav;
         } else {
-            this.inquietud.consultar(inquietud.getIdInquietud());
+            this.inquietud.consultaruna(inquietud.getIdInquietud());
             return new ModelAndView("");
         }
     }
