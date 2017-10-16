@@ -20,6 +20,14 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <!--
+                Acciones del CRUD asignatura
+                -->
+                <prop key="asignatura.html">controladoraAdmin</prop>
+                <prop key="addAsignatura.html">controladoraAdmin</prop>
+                <prop key="editAsignatura.html">controladoraAdmin</prop>
+                <prop key="listAsignatura.html">controladoraAdmin</prop>
+                <prop key="deleteAsignatura">controladoraAdmin</prop>                
             </props>
         </property>
     </bean>
@@ -32,6 +40,7 @@
     <!--
     The index controller.
     -->
+          <bean name="controladoraAdmin" class="Controladoras.ControladoraAdmin.controladoraAdmin" />
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
