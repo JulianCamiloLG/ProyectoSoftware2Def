@@ -7,7 +7,6 @@ package Modelos.CRUDEntidades;
 
 import Conexión.conexion;
 import Modelos.Entidades.Asignatura;
-import static java.lang.Integer.parseInt;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.dao.DataAccessException;
