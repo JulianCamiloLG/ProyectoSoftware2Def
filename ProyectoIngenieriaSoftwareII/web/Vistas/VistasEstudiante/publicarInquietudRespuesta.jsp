@@ -12,12 +12,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-        <title>Publicar inquietud</title>
+        <title>BeMonitor</title>
     </head>
     <body >
 	<div class="container">
             <header class="col-xs-12"><h1 align="center">Inquietud publicada con éxito</h1></header>
-		<form role="form" action="" method="post" class="form-horizontal col-xs-8">
+                <form:form method="post" class="form-horizontal col-xs-8" commandName="respuestainquietud">
                     <div class="form-group">
 			<label class="control-label col-xs-3">Asignatura:</label>
                             <div class="col-xs-7">
@@ -45,7 +45,7 @@
                             <button type="reset" class="btn btn-danger" id="btnPublicarInquietudContinuar"><span class="glyphicon glyphicon-ok"></span>Continuar</button>                      
                         </div>
                     </div>
-		</form>
+		</form:form>
         </div>		
     </body>
 </html>
