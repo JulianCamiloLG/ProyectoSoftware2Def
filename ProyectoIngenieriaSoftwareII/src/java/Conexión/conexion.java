@@ -18,8 +18,8 @@ public class conexion
         DriverManagerDataSource datos = new DriverManagerDataSource();
         datos.setDriverClassName("com.mysql.jdbc.Driver");
         datos.setUrl("jdbc:mysql://localhost/");
-        datos.setUsername("");
-        datos.setPassword("");
+        datos.setUsername("root");
+        datos.setPassword("sergio12");
         return datos;
     }
 

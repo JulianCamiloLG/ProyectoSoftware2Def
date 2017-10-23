@@ -27,7 +27,11 @@
                 <prop key="addAsignatura.html">controladoraAdmin</prop>
                 <prop key="editAsignatura.html">controladoraAdmin</prop>
                 <prop key="listAsignatura.html">controladoraAdmin</prop>
-                <prop key="deleteAsignatura">controladoraAdmin</prop>                
+                <prop key="deleteAsignatura">controladoraAdmin</prop> 
+                <!--
+                Publicar inquietud
+                -->               
+                <prop key="publicarInquietud.html">controladoraPublicarInquietud</prop>
             </props>
         </property>
     </bean>
@@ -41,6 +45,7 @@
     The index controller.
     -->
           <bean name="controladoraAdmin" class="Controladoras.ControladoraAdmin.controladoraAdmin" />
+          <bean name="controladoraPublicarInquietud" class="Controladoras.ControladoraEstudiante.controladoraPublicarInquietud" />
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />

@@ -74,8 +74,8 @@
                                         <c:forEach items="${inquietud}" var="inq">
                                             <tr>
                                                 <td><c:out value="${inq.descripcion}" /></td>
-                                                <td><c:out value="${inq.#}" /></td>
-                                                <td><c:out value="${inq.#}" /></td>
+                                                <td><c:out value="${inq.nombre}" /></td>
+                                                <td><c:out value="${inq.creditos}" /></td>
                                                 <td>
                                                     <button href="<c:url value="gestionarEvaluacionParaMonitorEditar.htm?codigo=${inq.idInquietud}" />"  class="btn boxed-action"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                                                     <button href="#" class="btn boxed-action" id="delete-account"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>

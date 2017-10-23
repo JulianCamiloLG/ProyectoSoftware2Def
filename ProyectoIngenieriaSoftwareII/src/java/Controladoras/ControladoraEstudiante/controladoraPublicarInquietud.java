@@ -33,8 +33,9 @@ public class controladoraPublicarInquietud
         this.inquietud = new CRUDInquietud();
     }
     
-    @RequestMapping("inquietud.htm")
+   /* @RequestMapping("publicarInquietud.htm")
     public ModelAndView home() {
+        System.out.println("llegue");
         ModelAndView mav = new ModelAndView();
         return mav;
     }
@@ -46,7 +47,7 @@ public class controladoraPublicarInquietud
         mav.addObject("inquietud", new Inquietud());
         return mav;
     }
-    
+    */
     @RequestMapping(value = "publicarInquietud.htm", method = RequestMethod.POST)
     public ModelAndView form(
             @ModelAttribute("inquietud") Inquietud inquietud,
@@ -59,6 +60,7 @@ public class controladoraPublicarInquietud
             mav.addObject("inquietud", new Inquietud());
             return mav;
         } else {
+            //System.out.println("Entre");
             this.inquietud.consultaruna(inquietud.getIdInquietud());
             return new ModelAndView("");
         }

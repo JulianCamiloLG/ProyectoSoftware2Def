@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" href="">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <title>BeMonitor</title>
@@ -16,11 +17,11 @@
     <body class="body">
 	<div class="container">
             <header class="col-xs-12"><h1 align="center">Publicar Inquietud</h1></header>
-                <form:form method="post" class="form-horizontal col-xs-8" commandName="inquietud">                    
+                <form:form method="POST" commandName="inquietud">                    
                     <div class="form-group">
-                        <label class="control-label col-xs-3">Asignatura</label>
+                        <form:label path="asignatura" class="control-label col-xs-3">Asignatura</form:label>
                             <div class="col-xs-9">
-                                <input type="text" name="inputAsignatura" id="inputAsignatura" value="" placeholder="Asignatura.." autocomplete="off" />
+                            <form:input path="asignatura" type="text" name="inputAsignatura" id="inputAsignatura" value="" placeholder="Asignatura.." autocomplete="off" />
                             </div>
                     </div>
                     <div class="form-group">
@@ -36,8 +37,8 @@
                             </div>
                     </div>
                     <div class="col-xs-offset-3 col-xs-9">
-			<button type="reset" class="btn btn-danger" id="btnPublicarInquietud">Publicar<span class="glyphicon glyphicon-ok"></span></button>
-                            <a href="##" class="btn btn-info">Cancelar <span class="glyphicon glyphicon-remove"></span></a>
+                        <button type="submit" class="btn btn-danger" id="btnPublicarInquietud">Publicar<span class="glyphicon glyphicon-ok"></span></button>
+                        <a href="../../redirect.jsp" class="btn btn-info">Cancelar <span class="glyphicon glyphicon-remove"></span></a>
                     </div>
 		</form:form>
 	</div>		
