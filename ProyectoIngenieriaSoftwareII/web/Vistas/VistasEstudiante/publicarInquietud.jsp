@@ -25,20 +25,20 @@
                             </div>
                     </div>
                     <div class="form-group">
-			<label class="control-label col-xs-3">Tema</label>
+                        <form:label path="tema" class="control-label col-xs-3">Tema</form:label>
                             <div class="col-xs-9">
-                                <textarea name="inputTema" rows="5" cols="70" maxlength="30" placeholder="Escribe aquí el tema..."></textarea>
+                            <form:textarea path="tema" name="inputTema" rows="5" cols="70" maxlength="30" placeholder="Escribe aquí el tema..."></form:textarea>
                             </div>
                     </div>
                     <div class="form-group">
-			<label class="control-label col-xs-3">Descripción</label>
+                    <form:label path="descripcion" class="control-label col-xs-3">Descripción</form:label>
                             <div class="col-xs-9">
-                                <textarea name="inputDescripcion" rows="5" cols="70" maxlength="60" placeholder="Escribe aquí la descripción..."></textarea>
+                            <form:textarea path="descripcion" name="inputDescripcion" rows="5" cols="70" maxlength="60" placeholder="Escribe aquí la descripción..."></form:textarea>
                             </div>
                     </div>
                     <div class="col-xs-offset-3 col-xs-9">
                         <button type="submit" class="btn btn-danger" id="btnPublicarInquietud">Publicar<span class="glyphicon glyphicon-ok"></span></button>
-                        <a href="../../redirect.jsp" class="btn btn-info">Cancelar <span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<c:url value="././WEB-INF/jsp/index.htm" />" class="btn btn-info">Cancelar <span class="glyphicon glyphicon-remove"></span></a>
                     </div>
 		</form:form>
 	</div>		
