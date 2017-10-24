@@ -21,6 +21,15 @@ public class Estudiante {
     public Estudiante() {
     }
 
+    /**
+     * 
+     * @param nombre
+     * @param apellido
+     * @param cedula
+     * @param correo
+     * @param calificacion
+     * @param monitor 
+     */
     public Estudiante(String nombre, String apellido, String cedula, String correo, int calificacion, int monitor) {
         this.nombre = nombre;
         this.apellido = apellido;

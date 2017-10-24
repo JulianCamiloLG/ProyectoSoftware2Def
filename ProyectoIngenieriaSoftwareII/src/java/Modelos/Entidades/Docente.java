@@ -20,6 +20,13 @@ public class Docente
     {
     }
 
+    /**
+     * 
+     * @param identificacion
+     * @param nombre
+     * @param apellido
+     * @param correoElectronico 
+     */
     public Docente(String identificacion, String nombre, String apellido, String correoElectronico)
     {
         this.identificacion = identificacion;

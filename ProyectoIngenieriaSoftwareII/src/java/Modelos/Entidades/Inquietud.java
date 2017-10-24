@@ -22,6 +22,15 @@ public class Inquietud
     {
     }
 
+    /**
+     * 
+     * @param idInquietud
+     * @param codigoEstudiante
+     * @param codigoidAsignatura
+     * @param tema
+     * @param Descripcion
+     * @param fechaPublicacion 
+     */
     public Inquietud(int idInquietud, int codigoEstudiante, int codigoidAsignatura, String tema, String Descripcion, String fechaPublicacion)
     {
         this.idInquietud = idInquietud;

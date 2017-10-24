@@ -14,6 +14,12 @@ public class Asignatura {
     private String nombre;
     private Integer creditos;
 
+    /**
+     * 
+     * @param codigo
+     * @param nombre
+     * @param creditos 
+     */
     public Asignatura(String codigo, String nombre, Integer creditos) {
         this.codigo = codigo;
         this.nombre = nombre;
