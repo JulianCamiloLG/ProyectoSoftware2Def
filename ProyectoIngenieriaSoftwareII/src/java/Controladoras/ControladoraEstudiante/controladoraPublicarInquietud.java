@@ -48,6 +48,14 @@ public class controladoraPublicarInquietud
         return mav;
     }
     */
+    
+    /**
+     * Metodo para crear una inquietud
+     * @param inquietud
+     * @param result
+     * @param status
+     * @return una nueva vista con la inquietud publicada
+     */
     @RequestMapping(value = "publicarInquietud.htm", method = RequestMethod.POST)
     public ModelAndView form(
             @ModelAttribute("inquietud") Inquietud inquietud,
