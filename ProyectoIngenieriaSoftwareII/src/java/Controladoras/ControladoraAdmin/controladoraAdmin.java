@@ -51,7 +51,7 @@ public class controladoraAdmin {
      * @param result
      * @param status
      * 
-     * @return 
+     * @return retorna a la vista index luego de registrar la asignatura
      */
     @RequestMapping(value = "addAsignatura.htm", method = RequestMethod.POST)
     public ModelAndView form(
@@ -70,6 +70,12 @@ public class controladoraAdmin {
             return new ModelAndView("redirect:/index.htm");
         }
     }
+    
+    /**
+     * Borra una asignatura selecionada
+     * @param request codigo de la asignatura que se desea borrar
+     * @return a la vista que tiene todas las asignaturas
+     */
 
     @RequestMapping("deleteAsignatura.htm")
     public ModelAndView home(HttpServletRequest request) {
@@ -78,13 +84,19 @@ public class controladoraAdmin {
         return new ModelAndView("redirect:/listAsignatura.htm");
     }
 
+    
+    /**
+     * Metodo para editar una asignatura selecionada
+     * @param request codigo de la asignatura que desea editar junto a todos sus parametros
+     * @return a la vista editar asignatura con los datos nuevos de la asignatura modificada
+     */
     @RequestMapping(value = "editAsignatura", method = RequestMethod.GET)
     public ModelAndView form(HttpServletRequest request) {
         ModelAndView mav = new ModelAndView();
         String codigo = request.getParameter("codigo");
         Asignatura datos = this.selectUsuario(codigo);
-        mav.setViewName("editAutor");
-        mav.addObject("autor", new Asignatura(codigo, datos.getNombre(), datos.getCreditos()));
+        mav.setViewName("editAsignatura");
+        mav.addObject("asignatura", new Asignatura(codigo, datos.getNombre(), datos.getCreditos()));
 
         return mav;
     }
@@ -119,7 +131,13 @@ public class controladoraAdmin {
 
     }
 
-    public Asignatura selectUsuario(String codigo) {
+    
+    /**
+     * Metodo simple para selecionar una asignatura
+     * @param codigo de la asignatura
+     * @return la asignatura deseada
+     */
+    public Asignatura selectAsignatura(String codigo) {
         return this.dao.seleccionarAsignatura(codigo);
     }
     
