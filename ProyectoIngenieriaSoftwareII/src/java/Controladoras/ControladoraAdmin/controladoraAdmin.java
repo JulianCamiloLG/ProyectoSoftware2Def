@@ -36,6 +36,10 @@ public class controladoraAdmin {
         this.AsignaturaValidar = new ValidacionesAsignatura();
     }
     
+    /**
+     * Metodo para agregar una asignatura
+     * @return a la vista asignatura
+     */
     @RequestMapping(value = "addAsignatura.htm", method = RequestMethod.GET)
     public ModelAndView form() {
         ModelAndView mav = new ModelAndView();
@@ -94,7 +98,7 @@ public class controladoraAdmin {
     public ModelAndView form(HttpServletRequest request) {
         ModelAndView mav = new ModelAndView();
         String codigo = request.getParameter("codigo");
-        Asignatura datos = this.selectUsuario(codigo);
+        Asignatura datos = this.selectAsignatura(codigo);
         mav.setViewName("editAsignatura");
         mav.addObject("asignatura", new Asignatura(codigo, datos.getNombre(), datos.getCreditos()));
 
@@ -119,7 +123,7 @@ public class controladoraAdmin {
         if (result.hasErrors()) {
             ModelAndView mav = new ModelAndView();
             String codigo = request.getParameter("codigo");
-            Asignatura datos = this.selectUsuario(codigo);
+            Asignatura datos = this.selectAsignatura(codigo);
             mav.setViewName("editAsignatura");
             mav.addObject("asignatura", new Asignatura(codigo, datos.getNombre(), datos.getCreditos()));
             return mav;
