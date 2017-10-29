@@ -66,7 +66,7 @@ public class CRUDInquietudTest {
     @Test
     public void testConsultarunaFallido() {
         System.out.println("consultaruna");
-        int idInquietud = 11;
+        int idInquietud = 12;
         CRUDInquietud instance = new CRUDInquietud();
         Inquietud expResult = null;
         Inquietud result = instance.consultaruna(idInquietud);
