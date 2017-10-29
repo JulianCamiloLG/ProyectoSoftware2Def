@@ -5,10 +5,16 @@
  */
 package Controladoras.ControladoraMonitor;
 
+import Modelos.Entidades.*;
+
 /**
  *
  * @author sergioandres
  */
 public class controladoraMonitor {
     
+    public void registrarMonitor(Estudiante monitor)
+    {
+        
+    }
 }
