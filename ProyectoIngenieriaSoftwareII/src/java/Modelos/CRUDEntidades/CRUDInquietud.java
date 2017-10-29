@@ -9,6 +9,7 @@ import Conexión.conexion;
 import Modelos.Entidades.Inquietud;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
 import org.springframework.dao.DataAccessException;
@@ -32,7 +33,7 @@ public class CRUDInquietud {
         this.sql= "";
     }
     
-    public int IngresarInquietud(int codigoestudiante, int codigoasignatura,String tema, String descrip, String date){
+    public int IngresarInquietud(int codigoestudiante, int codigoasignatura,String tema, String descrip, String date) throws ParseException{
         Inquietud nuevainquietud = new Inquietud(0,codigoestudiante,codigoasignatura,tema,descrip,date);
         this.sql="insert into inquietud(codigoestudiante,codigoasignatura,tema,descripcion,fechapublicacion) values ("+nuevainquietud.getCodigoEstudiante()+","+nuevainquietud.getCodigoidAsignatura()+","+nuevainquietud.getTema()+","+nuevainquietud.getDescripcion()+","+nuevainquietud.getFechaPublicacion()+");";
         int resul=this.jdbcTemplate.update(sql);
@@ -66,8 +67,8 @@ public class CRUDInquietud {
     }
     
     
-    public int editarInquietud(int idinquietud,int codigoestudiante, int codigoasignatura,String tema, String descrip, String date){
-        Inquietud nuevainquietud = new Inquietud(0,codigoestudiante,codigoasignatura,tema,descrip,date);
+    public int editarInquietud(int idinquietud,int codigoestudiante, int codigoasignatura,String tema, String descrip, String date) throws ParseException{
+        Inquietud nuevainquietud = new Inquietud(10,codigoestudiante,codigoasignatura,tema,descrip,date);
         this.sql="update inquietud set codigoestudiante="+nuevainquietud.getCodigoEstudiante()+",codigoasignatura="+nuevainquietud.getCodigoidAsignatura()
                 +",tema="+nuevainquietud.getTema()+",descripcion="+nuevainquietud.getDescripcion()+",fechapublicacion="+nuevainquietud.getFechaPublicacion()
                 +"where idinquietud="+idinquietud+";";

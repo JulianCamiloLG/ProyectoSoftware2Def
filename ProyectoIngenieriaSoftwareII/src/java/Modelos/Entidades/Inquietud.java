@@ -5,6 +5,12 @@
  */
 package Modelos.Entidades;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author SALDARRIAGA VILLADA
@@ -16,7 +22,7 @@ public class Inquietud
     private int codigoidAsignatura;
     private String tema;
     private String Descripcion;
-    private String fechaPublicacion;
+    private Date fechaPublicacion;
 
     public Inquietud()
     {
@@ -30,15 +36,17 @@ public class Inquietud
      * @param tema
      * @param Descripcion
      * @param fechaPublicacion 
+     * @throws java.text.ParseException 
      */
-    public Inquietud(int idInquietud, int codigoEstudiante, int codigoidAsignatura, String tema, String Descripcion, String fechaPublicacion)
+    public Inquietud(int idInquietud, int codigoEstudiante, int codigoidAsignatura, String tema, String Descripcion, String fechaPublicacion) throws ParseException
     {
         this.idInquietud = idInquietud;
         this.codigoEstudiante = codigoEstudiante;
         this.codigoidAsignatura = codigoidAsignatura;
         this.tema = tema;
         this.Descripcion = Descripcion;
-        this.fechaPublicacion = fechaPublicacion;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        this.fechaPublicacion = formatter.parse(fechaPublicacion);
     }
 
     /**
@@ -124,7 +132,7 @@ public class Inquietud
     /**
      * @return the fechaPublicacion
      */
-    public String getFechaPublicacion()
+    public Date getFechaPublicacion()
     {
         return fechaPublicacion;
     }
@@ -134,7 +142,12 @@ public class Inquietud
      */
     public void setFechaPublicacion(String fechaPublicacion)
     {
-        this.fechaPublicacion = fechaPublicacion;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        try {
+            this.fechaPublicacion = formatter.parse(fechaPublicacion);
+        } catch (ParseException ex) {
+            Logger.getLogger(Inquietud.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     
