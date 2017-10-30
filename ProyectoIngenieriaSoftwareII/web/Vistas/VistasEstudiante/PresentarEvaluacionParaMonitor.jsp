@@ -43,7 +43,7 @@
                                 </div>                          
                             <div class="col-xs-offset-2 col-xs-12 container">     
                                     <p> 
-                                    <form:label path="pregunta">Enunciado de la pregunta</form:label> 
+                                <form:label path="pregunta">Enunciado de la pregunta</form:label> 
                                         <textarea rows="4" cols="30" placeholder="">
                                         </textarea>  
                                     <input action="/action_page.php" type="file" name="imagenE" accept="image/png,image/jpeg"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> </input>
@@ -85,10 +85,6 @@
                                         </table>
                                     </form>                                                                   
                                </p>
-                            </div> 
-                            <div class="col-xs-offset-0 col-xs-12 container" align="center">
-                                <button type="input" class="btn btn-info" id="btnGuardarPregunta">Guardar pregunta</button>   
-                                <button type="reset" class="btn btn-danger" id="btnCancelarPregunta">Cancelar</button>  
                             </div> 
                         </form:form>
                 </div>
