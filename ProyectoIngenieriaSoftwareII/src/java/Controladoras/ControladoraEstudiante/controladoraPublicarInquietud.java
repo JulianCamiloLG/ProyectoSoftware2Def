@@ -49,7 +49,7 @@ public class controladoraPublicarInquietud
         return mav;
     }
     
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "publicarInquietud.htm",method = RequestMethod.GET)
     public String addInquietud(ModelMap model){
         model.addAttribute("inquietud", new Inquietud());
         return "inquietud";
