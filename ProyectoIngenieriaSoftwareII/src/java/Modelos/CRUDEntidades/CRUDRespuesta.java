@@ -9,7 +9,10 @@ import Conexión.conexion;
 import Modelos.Entidades.Pregunta;
 import Modelos.Entidades.Respuesta;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 
 /**
  *
@@ -67,12 +70,16 @@ public class CRUDRespuesta {
     public Respuesta seleccionarRespuesta(int idRespuesta) {
         final Respuesta res = new Respuesta();
         String quer = "SELECT * FROM respuesta WHERE idRespuesta=?" + idRespuesta;
-        return (Respuesta) jdbcTemplate.query(quer, (ResultSet rs) -> {
-            if (rs.next()) {
-                res.setDescripcionRespuesta(rs.getString("descripcionRespuesta"));
-                res.setCorrecta((rs.getString("correcta")));
+        return (Respuesta) jdbcTemplate.query(quer, new ResultSetExtractor<Respuesta>() {
+            @Override
+            public Respuesta extractData(ResultSet rs) throws SQLException, DataAccessException {
+                if (rs.next()) {
+                    res.setDescripcionRespuesta(rs.getString(2));
+                    char c = rs.getString(3).charAt(0);
+                    res.setCorrecta(c);
+                }
+                return res;
             }
-            return res;
         });
     }
     
