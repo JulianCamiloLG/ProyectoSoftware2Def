@@ -35,7 +35,6 @@
                                         <br>
                                         <br>
                                         <br>
-                                        
                                         </div>
                                     </p>                                    
                                 </div> 
@@ -58,25 +57,36 @@
                                 <p>
                                     <form action="/action_page.php" method="get">
                                         <h3 align="center">Opciones de respuesta</h3>
-                                        <textarea rows="2" cols="30" placeholder="Opcion 1">
-                                        </textarea>
-                                        <input type="radio" name="opcion" value="opcion1"> Marcar como correcta<br>
-                                        <textarea rows="2" cols="30" placeholder="Opcion 2">
-                                        </textarea>
-                                        <input type="radio" name="opcion" value="opcion2"> Marcar como correcta<br>
-                                        <textarea rows="2" cols="30" placeholder="Opcion 3">
-                                        </textarea>
-                                        <input type="radio" name="opcion" value="opcion3"> Marcar como correcta<br> 
-                                        <textarea rows="2" cols="30" placeholder="Opcion 4">
-                                        </textarea> 
-                                        <input type="radio" name="opcion" value="opcion4"> Marcar como correcta<br> 
+                                        <table class="table table-bordered table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Opcion#1</th>
+                                                    <th>Opcion#2</th>
+                                                    <th>Opcion#3</th>
+                                                    <th>Opcion#4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <c:forEach items="${datos}" var="datos">
+                                                    <tr>
+                                                        <td><c:out value="${datos.opcion1}" /></td><td><input type="radio" name="opcionCorrecta" value="Correcta1"><br></td>
+                                                        <td><c:out value="${datos.opcion2}" /></td><td><input type="radio" name="opcionCorrecta" value="Correcta2"><br></td>
+                                                        <td><c:out value="${datos.opcion3}" /></td><td><input type="radio" name="opcionCorrecta" value="Correcta3"><br></td>
+                                                        <td><c:out value="${datos.opcion4}" /></td><td><input type="radio" name="opcionCorrecta" value="Correcta4"><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <div class="col-xs-offset-0 col-xs-12 container" align="center">
+                                                            <button type="reset" class="btn btn-info" id="btnPresentarEvaluacion">Presentar Evaluacion</button>   
+                                                            <button type="reset" class="btn btn-danger" id="btnCancelarEvaluacion">Cancelar</button>  
+                                                        </div>
+                                                    </tr>
+                                                </c:forEach>
+                                            </tbody>
+                                        </table>
                                     </form>                                                                   
                                </p>
                             </div> 
-                            <div class="col-xs-offset-0 col-xs-12 container" align="center">
-                                <button type="reset" class="btn btn-info" id="btnGuardarPregunta">Guardar pregunta</button>   
-                                <button type="reset" class="btn btn-danger" id="btnCancelarPregunta">Cancelar</button>  
-                            </div> 
+                            
                         </form:form>
                 </div>
             </div>
