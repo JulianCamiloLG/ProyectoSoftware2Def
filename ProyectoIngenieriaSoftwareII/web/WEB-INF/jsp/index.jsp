@@ -16,6 +16,6 @@
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
         <a class="dropdown-item" href="././Vistas/VistasEstudiante/publicarInquietud.jsp">Publicar Inquietud</a><br>
-        <a class="dropdown-item" href="././Vistas/VistasEstudiante/VisualizarNota.jsp">Presentar Evaluacion</a>
+        <a class="dropdown-item" href="././Vistas/VistasEstudiante/VisualizarNota.jsp">Ver Nota</a>
     </body>
 </html>
