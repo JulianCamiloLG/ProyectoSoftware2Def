@@ -43,19 +43,20 @@ public class CRUDInquietud {
     
     public Inquietud consultaruna(int idInquietud){
         this.sql="select * from inquietud where idinquietud=" + idInquietud+";";
-        final Inquietud aux = new Inquietud();
         return (Inquietud) this.jdbcTemplate.query(sql, new ResultSetExtractor<Inquietud>() {
             @Override
             public Inquietud extractData(ResultSet rs) throws SQLException, DataAccessException {
                     if(rs.next()){
+                        Inquietud aux = new Inquietud();
                         aux.setIdInquietud(rs.getInt(1));
                         aux.setCodigoEstudiante(rs.getInt(2));
                         aux.setCodigoidAsignatura(rs.getInt(3));
                         aux.setTema(rs.getString(4));
                         aux.setDescripcion(rs.getString(5));
                         aux.setFechaPublicacion(rs.getString(6));
+                        return aux;
                     }
-                    return aux;
+                    return null;
                 }
         });
     }
