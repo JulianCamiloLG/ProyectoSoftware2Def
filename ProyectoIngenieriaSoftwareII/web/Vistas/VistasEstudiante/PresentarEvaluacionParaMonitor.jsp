@@ -20,7 +20,7 @@
             </header>
             <div class="panel panel-primary">                
                 <div class="panel-body">                                          
-                        <form:form method="post" commandName="gestionarevaluacion">                            
+                       <form:form method="post" commandName="gestionarevaluacion">                            
                             <form:errors path="*" element="div" cssClass="alert alert-danger" />
                                 <div class="col-xs-offset-2 col-xs-12 container">                                   
                                     <p> 
@@ -86,10 +86,12 @@
                                     </form>                                                                   
                                </p>
                             </div> 
-                            
+                            <div class="col-xs-offset-0 col-xs-12 container" align="center">
+                                <button type="input" class="btn btn-info" id="btnGuardarPregunta">Guardar pregunta</button>   
+                                <button type="reset" class="btn btn-danger" id="btnCancelarPregunta">Cancelar</button>  
+                            </div> 
                         </form:form>
                 </div>
             </div>
         </div>
     </body>
-</html>

@@ -8,13 +8,13 @@
         <title>Welcome to Spring Web MVC project</title>
     </head>
 
-    <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
-        <a class="dropdown-item" href="././Vistas/VistasEstudiante/publicarInquietud.jsp">Publicar Inquietud</a>
+    <body class="body">
+        <div class="container">
+            <h1>Bienvenido a BeMonitor</h1>
+            <p><i>Aqui encontrara todo lo necesario para el manejo previo de la pagina</i></p>
+                
+            <a class="dropdown-item" href="././Vistas/VistasEstudiante/publicarInquietud.jsp">Publicar Inquietud</a><br>
+            <a class="dropdown-item" href="././Vistas/VistasEstudiante/VisualizarNota.jsp">Ver Nota</a>
+        </div>
     </body>
 </html>
