@@ -17,7 +17,7 @@
     <body class="body">
 	<div class="container">
             <header class="col-xs-12"><h1 align="center">Publicar Inquietud</h1></header>
-                <form:form method="post" commandName="inquietud">                    
+            <form:form method="post" commandName="inquietud" modelAttribute="inquietud" action="publicarInquietud.html">                    
                     <div class="form-group">
                         <form:label path="asignatura" class="control-label col-xs-3">Asignatura</form:label>
                             <div class="col-xs-9">
