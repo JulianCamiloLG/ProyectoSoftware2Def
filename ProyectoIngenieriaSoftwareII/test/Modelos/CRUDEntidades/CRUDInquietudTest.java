@@ -51,7 +51,7 @@ public class CRUDInquietudTest {
         int codigoasignatura =3214;
         String tema = "direccionamiento";
         String descrip = "no entiendo ipv6";
-        String date = "18-05-2006";
+        String date = "2006-05-26";
         CRUDInquietud instance = new CRUDInquietud();
         int expResult = 1;
         int result = instance.IngresarInquietud(codigoestudiante, codigoasignatura, tema, descrip, date);
@@ -66,7 +66,7 @@ public class CRUDInquietudTest {
     @Test
     public void testConsultarunaFallido() {
         System.out.println("consultaruna");
-        int idInquietud = 12;
+        int idInquietud = 1;
         CRUDInquietud instance = new CRUDInquietud();
         Inquietud expResult = null;
         Inquietud result = instance.consultaruna(idInquietud);
@@ -113,11 +113,11 @@ public class CRUDInquietudTest {
      * Test of eliminarinquietud method, of class CRUDInquietud.
      */
     @Test
-    public void testEliminarinquietud() {
+    public void testEliminarinquietudFallido() {
         System.out.println("eliminarinquietud");
         int idinquietud = 10;
         CRUDInquietud instance = new CRUDInquietud();
-        int expResult = 1;
+        int expResult = 0;
         int result = instance.eliminarinquietud(idinquietud);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

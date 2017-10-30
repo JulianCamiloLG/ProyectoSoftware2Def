@@ -35,14 +35,14 @@ public class CRUDInquietud {
     
     public int IngresarInquietud(int codigoestudiante, int codigoasignatura,String tema, String descrip, String date) throws ParseException{
         Inquietud nuevainquietud = new Inquietud(0,codigoestudiante,codigoasignatura,tema,descrip,date);
-        this.sql="insert into inquietud(codigoestudiante,codigoasignatura,tema,descripcion,fechapublicacion) values ("+nuevainquietud.getCodigoEstudiante()+","+nuevainquietud.getCodigoidAsignatura()+","+nuevainquietud.getTema()+","+nuevainquietud.getDescripcion()+","+nuevainquietud.getFechaPublicacion()+");";
+        this.sql="insert into inquietud(idinquietud,codigoestudiante,codigoasignatura,tema,descripcion,fechapublicacion) values (0,"+nuevainquietud.getCodigoEstudiante()+","+nuevainquietud.getCodigoidAsignatura()+","+nuevainquietud.getTema()+","+nuevainquietud.getDescripcion()+","+nuevainquietud.getFechaPublicacion()+");";
         int resul=this.jdbcTemplate.update(sql);
         return resul;
     }
     
     
     public Inquietud consultaruna(int idInquietud){
-        this.sql="select * from inquietud where idquietud=" + idInquietud+";";
+        this.sql="select * from inquietud where idinquietud=" + idInquietud+";";
         final Inquietud aux = new Inquietud();
         return (Inquietud) this.jdbcTemplate.query(sql, new ResultSetExtractor<Inquietud>() {
             @Override
@@ -77,7 +77,7 @@ public class CRUDInquietud {
     }
     
     public int eliminarinquietud(int idinquietud){
-        this.sql="delete from inquietud where id inquietud="+idinquietud+";";
+        this.sql="delete from inquietud where idinquietud="+idinquietud+";";
         int result = this.jdbcTemplate.update(sql);
         return result;         
     }

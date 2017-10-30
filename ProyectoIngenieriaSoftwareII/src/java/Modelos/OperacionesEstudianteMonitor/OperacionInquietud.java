@@ -7,6 +7,7 @@ package Modelos.OperacionesEstudianteMonitor;
 
 import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.Entidades.Inquietud;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
 public class OperacionInquietud {
     
     
-    public int crearinquietud(int codigoestudiante,int codigoasignatura,String tema, String descp){
+    public int crearinquietud(int codigoestudiante,int codigoasignatura,String tema, String descp) throws ParseException{
         CRUDInquietud nuevainquietud= new CRUDInquietud();
         Date fecha= new Date();
         SimpleDateFormat dataformat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
@@ -42,7 +43,7 @@ public class OperacionInquietud {
         return result;
     }
     
-    public int modificar(int idinquietud,int codigoestudiante,int codigoasignatura,String tema, String descp){
+    public int modificar(int idinquietud,int codigoestudiante,int codigoasignatura,String tema, String descp) throws ParseException{
         CRUDInquietud nuevainquietud= new CRUDInquietud();
         Date fecha= new Date();
         SimpleDateFormat dataformat= new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");

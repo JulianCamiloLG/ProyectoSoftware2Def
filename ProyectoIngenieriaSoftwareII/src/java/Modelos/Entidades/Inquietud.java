@@ -45,7 +45,7 @@ public class Inquietud
         this.codigoidAsignatura = codigoidAsignatura;
         this.tema = tema;
         this.Descripcion = Descripcion;
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         this.fechaPublicacion = formatter.parse(fechaPublicacion);
     }
 
@@ -142,7 +142,7 @@ public class Inquietud
      */
     public void setFechaPublicacion(String fechaPublicacion)
     {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
         try {
             this.fechaPublicacion = formatter.parse(fechaPublicacion);
         } catch (ParseException ex) {

@@ -9,6 +9,7 @@ import Conexión.conexion;
 import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.Entidades.*;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,26 +21,20 @@ import org.springframework.web.servlet.ModelAndView;
  *
  * @author SALDARRIAGA VILLADA
  */
+@Controller
 public class controladoraPublicarInquietud
 {
     private JdbcTemplate jdbcTemplate;
     private CRUDInquietud inquietud;
     
-
+    
     public controladoraPublicarInquietud()
     {
         conexion conexionBD = new conexion();
         this.jdbcTemplate = new JdbcTemplate(conexionBD.conectar());
         this.inquietud = new CRUDInquietud();
     }
-    
-   /* @RequestMapping("publicarInquietud.htm")
-    public ModelAndView home() {
-        System.out.println("llegue");
-        ModelAndView mav = new ModelAndView();
-        return mav;
-    }
-    
+  
     @RequestMapping(value = "publicarInquietud.htm", method = RequestMethod.GET)
     public ModelAndView form() {
         ModelAndView mav = new ModelAndView();
@@ -47,8 +42,8 @@ public class controladoraPublicarInquietud
         mav.addObject("inquietud", new Inquietud());
         return mav;
     }
-    */
-    
+   
+ 
     /**
      * Metodo para crear una inquietud
      * @param inquietud
@@ -56,21 +51,15 @@ public class controladoraPublicarInquietud
      * @param status
      * @return una nueva vista con la inquietud publicada
      */
-    @RequestMapping(value = "publicarInquietud.htm", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public ModelAndView form(
             @ModelAttribute("inquietud") Inquietud inquietud,
             BindingResult result,
             SessionStatus status
     ) {
-        if (result.hasErrors()) {
-            ModelAndView mav = new ModelAndView();
-            mav.setViewName("publicarInquietud");
-            mav.addObject("inquietud", new Inquietud());
-            return mav;
-        } else {
+       
             //System.out.println("Entre");
             this.inquietud.consultaruna(inquietud.getIdInquietud());
             return new ModelAndView("");
         }
-    }
 }

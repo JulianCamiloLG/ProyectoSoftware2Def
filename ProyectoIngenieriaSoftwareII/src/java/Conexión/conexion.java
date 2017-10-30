@@ -17,9 +17,9 @@ public class conexion
     {
         DriverManagerDataSource datos = new DriverManagerDataSource();
         datos.setDriverClassName("com.mysql.jdbc.Driver");
-        datos.setUrl("jdbc:mysql://localhost/");
+        datos.setUrl("jdbc:mysql://localhost/bemonitorfinal");
         datos.setUsername("root");
-        datos.setPassword("sergio12");
+        datos.setPassword("Admin-1234");
         return datos;
     }
 

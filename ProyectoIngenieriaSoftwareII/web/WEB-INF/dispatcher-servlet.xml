@@ -23,15 +23,15 @@
                 <!--
                 Acciones del CRUD asignatura
                 -->
-                <prop key="asignatura.html">controladoraAdmin</prop>
-                <prop key="addAsignatura.html">controladoraAdmin</prop>
-                <prop key="editAsignatura.html">controladoraAdmin</prop>
-                <prop key="listAsignatura.html">controladoraAdmin</prop>
-                <prop key="deleteAsignatura">controladoraAdmin</prop> 
+                <prop key="asignatura.htm">controladoraAdmin</prop>
+                <prop key="addAsignatura.htm">controladoraAdmin</prop>
+                <prop key="editAsignatura.htm">controladoraAdmin</prop>
+                <prop key="listAsignatura.htm">controladoraAdmin</prop>
+                <prop key="deleteAsignatura.htm">controladoraAdmin</prop> 
                 <!--
                 Publicar inquietud
                 -->               
-                <prop key="publicarInquietud.html">controladoraPublicarInquietud</prop>
+                <prop key="publicarInquietud.htm">controladoraPublicarInquietud</prop>
             </props>
         </property>
     </bean>
