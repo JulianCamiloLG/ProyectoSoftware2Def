@@ -9,10 +9,7 @@ import Conexión.conexion;
 import Modelos.Entidades.Asignatura;
 import Modelos.Entidades.Pregunta;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 
 /**
  *
@@ -49,10 +46,10 @@ public class CRUDPregunta {
     }
     
     /**
-     * funcion para editar uina pregunta dado su identificados
+     * funcion para editar uina pregunta dado su identificador
      * @param p Onjeto con los nuevos datos de la pregunta
      * @param a Asignatura que se le esta modificando una pregunta
-     * @param idPregunta Identificado de la pregunta que se desea eliminar
+     * @param idPregunta Identificado de la pregunta que se desea editar
      * @return 
      */
     public int editarPregunta(Pregunta p, Asignatura a, int idPregunta){
@@ -71,16 +68,13 @@ public class CRUDPregunta {
     public Pregunta seleccionarPregunta(int idPregunta) {
         final Pregunta pre = new Pregunta();
         String quer = "SELECT * FROM pregunta WHERE idPregunta=?" + idPregunta;
-        return (Pregunta) jdbcTemplate.query(quer, new ResultSetExtractor<Pregunta>() {
-            public Pregunta extractData(ResultSet rs) throws SQLException, DataAccessException {
-                if (rs.next()) {
-                    pre.setEnunciado(rs.getString("enunciado"));
-                    pre.setRutaImagen((rs.getString("rutaImagen")));
-                }
-                return pre;
+        return (Pregunta) jdbcTemplate.query(quer, (ResultSet rs) -> {
+            if (rs.next()) {
+                pre.setEnunciado(rs.getString("enunciado"));
+                pre.setRutaImagen((rs.getString("rutaImagen")));
             }
-        }
-        );
+            return pre;
+        });
     }
     
     
