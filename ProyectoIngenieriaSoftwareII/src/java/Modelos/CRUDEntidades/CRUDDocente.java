@@ -33,29 +33,28 @@ public class CRUDDocente {
     }
     
     /**
-     * funcion para eliminar una pregunta de la base de datos dado su id
-     * @param idPregunta identificador de la pregunta que se desea eliminar
+     * funcion para eliminar un docente de la base de datos del sistema
+     * @param identificacion  identificador del docente que se desea eliminar
      * @return 
      */
-    public int eliminarPregunta(int idPregunta){
-        return jdbcTemplate.update("DELETE from pregunta "
+    public int eliminarDocente(int identificacion){
+        return jdbcTemplate.update("DELETE from docente "
                 + "WHERE "
-                + "idPregunta=?;",idPregunta);
+                + "identificacion=?;",identificacion);
     }
     
     /**
-     * funcion para editar uina pregunta dado su identificador
-     * @param p Onjeto con los nuevos datos de la pregunta
-     * @param a Asignatura que se le esta modificando una pregunta
-     * @param idPregunta Identificado de la pregunta que se desea editar
+     * funcion para editar un docente dada su identificacion
+     * @param d Objeto con los nuevos datos del docente
+     * @param identificacion  Identificador del docente que se desea editar
      * @return 
      */
-    public int editarPregunta(Pregunta p, Asignatura a, int idPregunta){
-        return jdbcTemplate.update("UPDATE pregunta"
-                + "enunciado=?,"
-                + "rutaImagen=?"
-                + "codigoAsignatura=?,"
-                + "WHERE idPregunta=?", p.getEnunciado(),p.getRutaImagen(),a.getCodigo(),idPregunta);
+    public int editarDocente(Docente d, String identificacion){
+        return jdbcTemplate.update("UPDATE docente"
+                + "nombre=?,"
+                + "apellido=?"
+                + "correoElectronico=?,"
+                + "WHERE identificacion=?",d.getNombre(),d.getApellido(),d.getCorreoElectronico(),identificacion);
     }
     
     /**
