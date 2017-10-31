@@ -9,6 +9,7 @@ import Conexión.conexion;
 import Modelos.Entidades.Asignatura;
 import Modelos.Entidades.Pregunta;
 import java.sql.ResultSet;
+import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
@@ -17,6 +18,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
  */
 public class CRUDPregunta {
     private JdbcTemplate jdbcTemplate;
+    private String sql;
 
     public CRUDPregunta() {
         conexion con = new conexion();
@@ -77,7 +79,25 @@ public class CRUDPregunta {
         });
     }
     
+    /**
+     * funcion para buscar todas las preguntas que hay en la base de datos
+     * @return lista total de preguntas
+     */
+    public List consultarTodas(){
+        this.sql = "select * from preguntas order by idpregunta desc";
+        List datos = this.jdbcTemplate.queryForList(sql);
+        return datos;
+    }
     
+    /**
+     * funcion para buscar 10 preguntas de manera aleatoria en la base de datos
+     * @return preguntas aleatorias
+     */
+    public List consultarAleatorio(){
+        this.sql = "SELECT * FROM preguntas ORDER BY RAND() LIMIT 10";
+        List datos = this.jdbcTemplate.queryForList(sql);
+        return datos;
+    }
     
     
 }

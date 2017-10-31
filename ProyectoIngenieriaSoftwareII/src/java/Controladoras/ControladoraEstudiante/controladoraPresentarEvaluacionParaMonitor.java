@@ -59,7 +59,13 @@ public class controladoraPresentarEvaluacionParaMonitor
         return "pregunta";
     }
  
-    
+    /**
+     * Metodo para seleccionar una pregunta para evaluar
+     * @param pregunta 
+     * @param result
+     * @param status
+     * @return una nueva vista con la inquietud publicada
+     */
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView form(
             @ModelAttribute("pregunta") Pregunta pregunta,
