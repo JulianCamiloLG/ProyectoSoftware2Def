@@ -12,7 +12,7 @@ package Modelos.Entidades;
 public class Docente
 {
     private String identificacion;
-    private  String nombre;
+    private String nombre;
     private String apellido;
     private String correoElectronico;
 
