@@ -23,17 +23,13 @@ public class CRUDDocente {
     }
     
     /**
-     * funcion para crear una pregunta en la base de datos
-     * @param p Pregunta que se desea registrar
-     * @param a Asignatura a la que se va a registrar una nueva pregunta
+     * funcion para registrar un nuevo docente en la base de datos
+     * @param d Modelo de docente que se desea registrar
+     * @return 
      */
-    private String identificacion;
-    private String nombre;
-    private String apellido;
-    private String correoElectronico;
     public int registrarDocente(Docente d){
-        return jdbcTemplate.update("INSERT INTO docente (idPregunta,enunciado,rutaImagen,codigoAsignatura)"
-        + "VALUES (?,?,?,?)",p.getIdPregunta(),p.getEnunciado(),p.getRutaImagen(),a.getCodigo());
+        return jdbcTemplate.update("INSERT INTO docente (identificacion,nombre,apellido,correoElectronico)"
+        + "VALUES (?,?,?,?)",d.getIdentificacion(),d.getNombre(),d.getApellido(),d.getCorreoElectronico());
     }
     
     /**
