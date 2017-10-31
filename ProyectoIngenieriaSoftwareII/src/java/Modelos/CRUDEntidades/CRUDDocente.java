@@ -7,6 +7,8 @@ package Modelos.CRUDEntidades;
 
 import Conexión.conexion;
 import Modelos.Entidades.Docente;
+import java.sql.ResultSet;
+import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
@@ -59,40 +61,29 @@ public class CRUDDocente {
     
     /**
      * funcion para consultar en la base de datos una pregunta
-     * @param idPregunta idetificador de la pregunta que se desea consultar
+     * @param identificacion idetificador de la persona que se desea consultar
      * @return una pregunta con todos sus valores
      */
-    public Pregunta seleccionarPregunta(int idPregunta) {
-        final Pregunta pre = new Pregunta();
-        String quer = "SELECT * FROM pregunta WHERE idPregunta=?" + idPregunta;
-        return (Pregunta) jdbcTemplate.query(quer, (ResultSet rs) -> {
+    public Docente seleccionarDocente(int identificacion) {
+        final Docente doc = new Docente();
+        String quer = "SELECT * FROM docente WHERE identificacion=?" + identificacion;
+        return (Docente) jdbcTemplate.query(quer, (ResultSet rs) -> {
             if (rs.next()) {
-                pre.setEnunciado(rs.getString("enunciado"));
-                pre.setRutaImagen((rs.getString("rutaImagen")));
+                doc.setNombre(rs.getString("nombre"));
+                doc.setApellido(rs.getString("apellido"));
+                doc.setCorreoElectronico(rs.getString("correoElectronico"));
             }
-            return pre;
+            return doc;
         });
     }
     
     /**
-     * funcion para buscar todas las preguntas que hay en la base de datos
-     * @return lista total de preguntas
+     * funcion para buscar todas los docente que hay en la base de datos
+     * @return lista total de docente
      */
-    public List consultarTodas(){
-        this.sql = "select * from preguntas order by idpregunta desc";
+    public List consultarTodos(){
+        this.sql = "select * from docentes order by identificacion desc";
         List datos = this.jdbcTemplate.queryForList(sql);
         return datos;
     }
-    
-    /**
-     * funcion para buscar 10 preguntas de manera aleatoria en la base de datos
-     * @return preguntas aleatorias
-     */
-    public List consultarAleatorio(){
-        this.sql = "SELECT * FROM preguntas ORDER BY RAND() LIMIT 10";
-        List datos = this.jdbcTemplate.queryForList(sql);
-        return datos;
-    }
-    
-    
 }
