@@ -43,9 +43,11 @@ public class CRUDInquietudTest {
 
     /**
      * Test of IngresarInquietud method, of class CRUDInquietud.
+     * Se pretende comprobar la correcta insersion en la base de datos
+     * de una nueva inquietud
      */
     @Test
-    public void testIngresarInquietud() throws ParseException {
+    public void testIngresarInquietudCorrecto() throws ParseException {
         System.out.println("IngresarInquietud");
         int codigoestudiante = 1234;
         int codigoasignatura =3214;
@@ -62,6 +64,8 @@ public class CRUDInquietudTest {
 
     /**
      * Test of consultaruna method, of class CRUDInquietud.
+     * Se desea probar que el sistema responde correctamente al
+     * fallo en una consulta de una inquietud
      */
     @Test
     public void testConsultarunaFallido() {
@@ -111,6 +115,8 @@ public class CRUDInquietudTest {
 
     /**
      * Test of eliminarinquietud method, of class CRUDInquietud.
+     * Comprobando que el sistema responde adecuadamente al fallo
+     * en un borrado de inquietud
      */
     @Test
     public void testEliminarinquietudFallido() {
