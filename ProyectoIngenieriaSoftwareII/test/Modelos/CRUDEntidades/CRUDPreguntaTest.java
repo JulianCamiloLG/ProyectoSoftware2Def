@@ -95,6 +95,7 @@ public class CRUDPreguntaTest {
 
     /**
      * Test of seleccionarPregunta method, of class CRUDPregunta.
+     * Se prueba el borrado de una pregunta que no existe
      */
     @Test
     public void testSeleccionarPreguntaFallido() {
