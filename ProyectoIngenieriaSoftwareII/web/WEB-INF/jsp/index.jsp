@@ -23,7 +23,7 @@
 
 <!-- Stylesheet
     ================================================== -->
-<link rel="stylesheet" type="text/css"  href="././Vistas/Extras/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"  href="././Vistas/Extras/css/style.css">
 <link rel="stylesheet" type="text/css" href="././Vistas/Extras/css/prettyPhoto.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
@@ -55,7 +55,7 @@
         <li><a href="#works-section" class="page-scroll">Funciones</a></li>
         <li><a href="#about-section" class="page-scroll">Sobre nosotros</a></li>
         <li><a href="#team-section" class="page-scroll">EasySoluciones</a></li>
-        <li><a href="#contact-section" class="page-scroll">Contactanos</a></li>
+        <li><a href="#contact-section" class="page-scroll">Contáctanos</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -83,7 +83,7 @@
     <div class="space"></div>
     <div class="row">
       <div class="col-md-3 col-sm-6 service"> <i class="fa fa-desktop"></i>
-        <h4>Resolucion de dudas</h4>
+        <h4>Resolución de dudas</h4>
         <p>Podras preguntrar tranquilamente cualquier duda sobre cualquier materia que desees.</p>
       </div>
       <div class="col-md-3 col-sm-6 service"> <i class="fa fa-gears"></i>
@@ -108,7 +108,7 @@
       <h2>Nuestros servicios</h2>
       <hr>
       <div class="clearfix"></div>
-      <p>Diferentes funcionalidades dadas en el sistema para tu.</p>
+      <p>Diferentes funcionalidades dadas en el sistema para tus necesidades.</p>
     </div>
     <div class="categories">
       <ul class="cat">
@@ -231,7 +231,7 @@
       <div class="col-md-6">
         <div class="about-text">
           <h4>Quienes somos</h4>
-          <p>Somos Easysoluciones, un equipo de desarrollo de software dedicado a solucionar de la forma mas facil los problemas de las personas</p>
+          <p>Somos EasySoluciones, un equipo de desarrollo de software dedicado a solucionar de la forma mas facil los problemas de las personas</p>
           <h4>Que hacemos</h4>
           <p>Desarrollamos software de cualquier clase, con la mas alta calidad</p>
           <h4>Porque escogernos</h4>
@@ -272,7 +272,7 @@
 <div id="team-section" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>Conocenos</h2>
+      <h2>Conócenos</h2>
       <hr>
       <p>Conoce a todos los integrantes de EasySoluciones</p>
     </div>
