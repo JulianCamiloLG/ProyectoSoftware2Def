@@ -12,22 +12,22 @@
 <!-- Favicons
     ================================================== -->
 
-<link rel="shortcut icon" href="../../Vistas/Extras/img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="../../Vistas/Extras/img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../../Vistas/Extras/img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../../Vistas/Extras/img/apple-touch-icon-114x114.png">
+<link rel="shortcut icon" href="././Vistas/Extras/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="././Vistas/Extras/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="././Vistas/Extras/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="././Vistas/Extras/img/apple-touch-icon-114x114.png">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="../../Vistas/Extras/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../../Vistas/Extras/fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css"  href="././Vistas/Extras/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="././Vistas/Extras/fonts/font-awesome/css/font-awesome.css">
 
 <!-- Stylesheet
     ================================================== -->
-<link rel="stylesheet" type="text/css"  href="../../Vistas/Extras/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../../Vistas/Extras/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css"  href="././Vistas/Extras/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="././Vistas/Extras/css/prettyPhoto.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="../../Vistas/Extras/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="././Vistas/Extras/js/modernizr.custom.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +45,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i> BeMonitor<strong></strong></a> </div>
+      <a class="navbar-brand" href="redirect.jsp"><i class="fa fa-sun-o"></i> BeMonitor<strong></strong></a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -133,7 +133,7 @@
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/01.jpg" class="img-responsive" alt="Publicar Inquietud"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/01.jpg" class="img-responsive" alt="Publicar Inquietud"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 app">
@@ -144,73 +144,73 @@
                 <small>App Development</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/02.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/02.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/03.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/03.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/03.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/03.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/04.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/04.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/04.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/04.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 app">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/05.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/05.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>App Development</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/05.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/05.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 branding">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/06.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/06.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>Branding</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/06.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/06.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 branding app">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/07.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/07.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>App Development, Branding</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/07.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/07.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="../../Vistas/Extras/img/portfolio/08.jpg" rel="prettyPhoto">
+            <div class="hover-bg"> <a href="././Vistas/Extras/img/portfolio/08.jpg" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="../../Vistas/Extras/img/portfolio/08.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="././Vistas/Extras/img/portfolio/08.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
       </div>
@@ -221,13 +221,13 @@
 <div id="about-section">
   <div class="container">
     <div class="section-title text-center center">
-      <h2>Spbre nosotros</h2>
+      <h2>Sobre nosotros</h2>
       <hr>
       <div class="clearfix"></div>
       <p>BeMonitor desarrollada por el equipo EasySoluciones, atento a necesidades de los demas</p>
     </div>
     <div class="row">
-      <div class="col-md-6"> <img src="../../Vistas/Extras/img/about.jpg" class="img-responsive"> </div>
+      <div class="col-md-6"> <img src="././Vistas/Extras/img/about.jpg" class="img-responsive"> </div>
       <div class="col-md-6">
         <div class="about-text">
           <h4>Quienes somos</h4>
@@ -278,7 +278,7 @@
     </div>
     <div id="row">
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="../../Vistas/Extras/img/team/01.jpg" alt="..." class="img-circle team-img">
+        <div class="thumbnail"> <img src="././Vistas/Extras/img/team/01.jpg" alt="..." class="img-circle team-img">
           <div class="caption">
             <h3>John Doe</h3>
             <p>Founder / CEO</p>
@@ -287,7 +287,7 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="../../Vistas/Extras/img/team/02.jpg" alt="..." class="img-circle team-img">
+        <div class="thumbnail"> <img src="././Vistas/Extras/img/team/02.jpg" alt="..." class="img-circle team-img">
           <div class="caption">
             <h3>Mike Doe</h3>
             <p>Web Designer</p>
@@ -296,7 +296,7 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="../../Vistas/Extras/img/team/03.jpg" alt="..." class="img-circle team-img">
+        <div class="thumbnail"> <img src="././Vistas/Extras/img/team/03.jpg" alt="..." class="img-circle team-img">
           <div class="caption">
             <h3>Jane Doe</h3>
             <p>Creative Director</p>
@@ -305,7 +305,7 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="../../Vistas/Extras/img/team/04.jpg" alt="..." class="img-circle team-img">
+        <div class="thumbnail"> <img src="././Vistas/Extras/img/team/04.jpg" alt="..." class="img-circle team-img">
           <div class="caption">
             <h3>Larry Show</h3>
             <p>Project Manager</p>
@@ -390,19 +390,19 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/jquery.1.11.1.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script type="text/javascript" src="../../Vistas/Extras/js/bootstrap.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/jquery.counterup.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/waypoints.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/jquery.prettyPhoto.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="../../Vistas/Extras/js/contact_me.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/bootstrap.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/jquery.counterup.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/waypoints.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="././Vistas/Extras/js/contact_me.js"></script> 
 
 <!-- Javascripts
     ================================================== --> 
-<script type="text/javascript" src="../../Vistas/Extras/js/main.js"></script>
+<script type="text/javascript" src="././Vistas/Extras/js/main.js"></script>
 </body>
 </html>
