@@ -221,21 +221,21 @@
 <div id="about-section">
   <div class="container">
     <div class="section-title text-center center">
-      <h2>About Us</h2>
+      <h2>Spbre nosotros</h2>
       <hr>
       <div class="clearfix"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
+      <p>BeMonitor desarrollada por el equipo EasySoluciones, atento a necesidades de los demas</p>
     </div>
     <div class="row">
       <div class="col-md-6"> <img src="img/about.jpg" class="img-responsive"> </div>
       <div class="col-md-6">
         <div class="about-text">
-          <h4>Who We Are</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
-          <h4>What We Do</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh ante facilisis bibendum.</p>
-          <h4>Why Choose Us</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at.</p>
+          <h4>Quienes somos</h4>
+          <p>Somos Easysoluciones, un equipo de desarrollo de software dedicado a solucionar de la forma mas facil los problemas de las personas</p>
+          <h4>Que hacemos</h4>
+          <p>Desarrollamos software de cualquier clase, con la mas alta calidad</p>
+          <h4>Porque escogernos</h4>
+          <p>Nuestras soluciones son las mas faciles y eficientes a los problemas que se puedan presentar en la vida diaria</p>
         </div>
       </div>
     </div>
@@ -247,22 +247,22 @@
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> <span class="count">210</span>
-          <h4>Happy clients</h4>
+          <h4>Clientes felices</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> <span class="count">9,500</span>
-          <h4>Working hours</h4>
+          <h4>Horas trabajadas</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> <span class="count">590</span>
-          <h4>Projects completed</h4>
+          <h4>Proyectos completados</h4>
         </div>
       </div>
       <div class="col-md-3 col-sm-3">
         <div class="achievement-box"> <span class="count">14</span>
-          <h4>Awards won</h4>
+          <h4>Premios ganados</h4>
         </div>
       </div>
     </div>
@@ -272,9 +272,9 @@
 <div id="team-section" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>Meet the Team</h2>
+      <h2>Conocenos</h2>
       <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diamcommodo nibh ante facilisis.</p>
+      <p>Conoce a todos los integrantes de EasySoluciones</p>
     </div>
     <div id="row">
       <div class="col-md-3 col-sm-6 team">
