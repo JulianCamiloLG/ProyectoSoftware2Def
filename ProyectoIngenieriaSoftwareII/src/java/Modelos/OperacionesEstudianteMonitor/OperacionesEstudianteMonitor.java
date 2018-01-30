@@ -20,7 +20,10 @@ public class OperacionesEstudianteMonitor {
     {
         for (Estudiante estudianteIterador:totalEstudiantes)
         {
-            
+            if (estudianteIterador.getMonitor()!=0)
+            {
+                this.monitores.add(estudianteIterador);
+            }
         }
         return monitores;
     }
