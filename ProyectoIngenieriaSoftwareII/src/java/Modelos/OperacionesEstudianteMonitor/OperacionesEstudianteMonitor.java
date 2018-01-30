@@ -6,15 +6,22 @@
 package Modelos.OperacionesEstudianteMonitor;
 
 import java.util.LinkedList;
-
+import Modelos.Entidades.*;
+import java.util.List;
 /**
  *
  * @author sergioandres
  */
 public class OperacionesEstudianteMonitor {
  
-    public LinkedList<String> obtenerMonitores()
+    LinkedList<Estudiante> monitores = new LinkedList<>();
+    
+    public LinkedList<Estudiante> obtenerMonitores(List<Estudiante> totalEstudiantes)
     {
-        
+        for (Estudiante estudianteIterador:totalEstudiantes)
+        {
+            
+        }
+        return monitores;
     }
 }
