@@ -10,5 +10,9 @@ package Modelos.OperacionesEstudianteMonitor;
  * @author sergioandres
  */
 public class OperacionesEstudianteMonitor {
-    
+ 
+    public void obtenerMonitores()
+    {
+        
+    }
 }
