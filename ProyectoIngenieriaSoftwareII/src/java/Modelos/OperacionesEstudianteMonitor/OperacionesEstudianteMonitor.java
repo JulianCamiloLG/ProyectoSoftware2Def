@@ -5,13 +5,15 @@
  */
 package Modelos.OperacionesEstudianteMonitor;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author sergioandres
  */
 public class OperacionesEstudianteMonitor {
  
-    public void obtenerMonitores()
+    public LinkedList<String> obtenerMonitores()
     {
         
     }
