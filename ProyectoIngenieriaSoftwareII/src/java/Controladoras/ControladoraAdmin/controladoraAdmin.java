@@ -9,6 +9,7 @@ import Conexión.conexion;
 import Modelos.CRUDEntidades.CRUDAsignatura;
 import Modelos.OperacionesDocenteAdmin.ValidacionesAsignatura;
 import Modelos.Entidades.Asignatura;
+import java.util.LinkedList;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -40,11 +41,13 @@ public class controladoraAdmin {
      * Metodo para agregar una asignatura
      * @return a la vista asignatura
      */
-    @RequestMapping(value = "addAsignatura.htm", method = RequestMethod.GET)
+    @RequestMapping(value = "gestionarAsignatura.htm", method = RequestMethod.GET)
     public ModelAndView form() {
+        Asignatura asig = dao.seleccionarAsignatura("123");
+        System.out.println(asig.getNombre());
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("addAsignatura");
-        mav.addObject("asignatura", new Asignatura());
+        mav.setViewName("gestionarAsignatura");
+        mav.addObject("asig", asig);
         return mav;
     }
 
@@ -57,7 +60,7 @@ public class controladoraAdmin {
      * 
      * @return retorna a la vista index luego de registrar la asignatura
      */
-    @RequestMapping(value = "addAsignatura.htm", method = RequestMethod.POST)
+    @RequestMapping(value = "addAsignatura.htm", method = RequestMethod.GET)
     public ModelAndView form(
             @ModelAttribute("asignatura") Asignatura a,
             BindingResult result,
@@ -71,7 +74,7 @@ public class controladoraAdmin {
             return mav;
         } else {
             this.dao.registrarAsignatura(a);
-            return new ModelAndView("redirect:/index.htm");
+            return new ModelAndView("redirect:/gestionarAsignatura.htm");
         }
     }
     

@@ -10,7 +10,6 @@ import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.Entidades.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,11 +48,11 @@ public class controladoraPublicarInquietud
         return mav;
     }
     
-    @RequestMapping(value = "publicarInquietud.htm",method = RequestMethod.GET)
-    public String addInquietud(ModelMap model){
-        model.addAttribute("inquietud", new Inquietud());
-        return "inquietud";
-    }
+//    @RequestMapping(value = "publicarInquietud.htm",method = RequestMethod.GET)
+//    public String addInquietud(ModelMap model){
+//        model.addAttribute("inquietud", new Inquietud());
+//        return "inquietud";
+//    }
  
     /**
      * Metodo para crear una inquietud
