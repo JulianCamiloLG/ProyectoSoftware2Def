@@ -16,6 +16,12 @@ public class OperacionesEstudianteMonitor {
  
     LinkedList<Estudiante> monitores = new LinkedList<>();
     
+    /**
+     * Método para listar los estudiantes que son monitores y están registrados en el sistema
+     * @param totalEstudiantes lista donde se encuentran todos los estudiantes que se han registrado en el sistema;
+     * ya sean monitores o no
+     * @return retorna lista con los estudiantes que cumplen con el papel de monitores.
+     */
     public LinkedList<Estudiante> obtenerMonitores(List<Estudiante> totalEstudiantes)
     {
         for (Estudiante estudianteIterador:totalEstudiantes)
