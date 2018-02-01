@@ -33,6 +33,10 @@
                 Publicar inquietud
                 -->               
                 <prop key="publicarInquietud.htm">controladoraPublicarInquietud</prop>
+                <!--
+                Responder inquietud
+                --> 
+                <prop key="responderInquietud.htm">controladoraResponderInquietud</prop>
             </props>
         </property>
     </bean>
@@ -48,8 +52,8 @@
     <bean name="homeController" class="Controladoras.ControladoraAdmin.HomeController" />
     <bean name="controladoraAdmin" class="Controladoras.ControladoraAdmin.controladoraAdmin" />
     <bean name="controladoraPublicarInquietud" class="Controladoras.ControladoraEstudiante.controladoraPublicarInquietud" />
-    <bean name="indexController"
-          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="index" />
+    <bean name="controladoraResponderInquietud" class="Controladoras.ControladoraMonitor.controladoraResponderInquietud" />
+    
+    <bean name="indexController" class="org.springframework.web.servlet.mvc.ParameterizableViewController" p:viewName="index" />
 
 </beans>
