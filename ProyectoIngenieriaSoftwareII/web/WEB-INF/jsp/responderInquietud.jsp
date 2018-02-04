@@ -8,56 +8,34 @@
 <%@taglib  prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="es">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
         <title>BeMonitor</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <!-- Favicons
-            ================================================== -->
-        <link rel="icon" type="image/png" href="<c:url value="/assets/img/favicon.png" />" >
-        <link rel="shortcut icon" type="image/x-icon" href="<c:url value="/assets/img/favicon.ico" />">
-        <link rel="apple-touch-icon" href="<c:url value="/assets/img/apple-touch-icon.png"/>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<c:url value="/assets/img/apple-touch-icon-72x72.png"/>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<c:url value="/assets/img/apple-touch-icon-114x114.png"/>">
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css"  href="<c:url value="/assets/css/bootstrap.css" />">
-        <link rel="stylesheet" type="text/css" href="<c:url value="/assets/fonts/font-awesome/css/font-awesome.css"/>">
-
-        <!-- Stylesheet
-            ================================================== -->
-        <link rel="stylesheet" type="text/css"  href="<c:url value="/assets/css/style.css"/>" >
-        <link rel="stylesheet" type="text/css" href="<c:url value="/assets/css/prettyPhoto.css"/>" >
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="<c:url value="/assets/js/modernizr.custom.js"/>" ></script>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Formulario</div>
-                <div class="panel-body">
-
-                    
-                    <form action="responderInquietud" method="POST">
-                        <p>
-                            <form:label path="codigo">Fecha:</form:label>
-                            <form:input path="codigo" cssClass="form-control" />
-
-                        </p>
-                        <button class="btn btn-success" id="agregarHoraro" name="agregarHorario">Agregar Horario</button>
-                        <button class="btn btn-success" id="enviarRespuesta" name="enviarRespuesta" type="submit">Enviar Respuesta</button>
-                        <input type="submit" value="Enviar" class="btn btn-danger" />
-                    </form>
-                </div>
-            </div>
-
+        <div class="col-xs-12 container">                                        
+            <form:form method="post" commandName="responderInquietud">
+                <cemter>
+                    <div class="modal-dialog container"> 
+                        <h1>Responder Inquietud</h1> 
+                        <br>
+                        <br>
+                        <label for="" >Fecha:</label><input type="date" id="fechaRespuesta" name="fechaRespuesta"> 
+                        <br>
+                        <br> 
+                        <label for="">Hora inicio:</label><input type="time" id="horaInicioRespuesta" name="horaInicioRespuesta">   
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <button class="btn btn-success" type="button" name="agregarHorarios" id="agregarHorarios">Agregar Horarios</button> 
+                        <button class="btn btn-success" type="submit" name="enviarRespuesta" id="enviarRespuesta">Enviar Respuesta</button> 
+                    </div> 
+                </cemter> 
+            </form:form>
         </div>
-        <h1>Hello World!</h1>
     </body>
 </html>
