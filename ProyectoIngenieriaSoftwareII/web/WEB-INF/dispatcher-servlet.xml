@@ -37,6 +37,10 @@
                 Responder inquietud
                 --> 
                 <prop key="responderInquietud.htm">controladoraResponderInquietud</prop>
+                <!--
+                Generar Reporte Inquietudes frecuentes
+                -->
+                <prop key="generarReporteInquietudesFrecuentes.htm">controladoraGenerarReporteInquietudesFrecuentes</prop>                
             </props>
         </property>
     </bean>
@@ -53,6 +57,7 @@
     <bean name="controladoraAdmin" class="Controladoras.ControladoraAdmin.controladoraAdmin" />
     <bean name="controladoraPublicarInquietud" class="Controladoras.ControladoraEstudiante.controladoraPublicarInquietud" />
     <bean name="controladoraResponderInquietud" class="Controladoras.ControladoraMonitor.controladoraResponderInquietud" />
+    <bean name="controladoraGenerarReporteInquietudesFrecuentes" class="Controladoras.ControladoraDocente.controladoraGenerarReporteInquietudesFrecuentes" />
     
     <bean name="indexController" class="org.springframework.web.servlet.mvc.ParameterizableViewController" p:viewName="index" />
 

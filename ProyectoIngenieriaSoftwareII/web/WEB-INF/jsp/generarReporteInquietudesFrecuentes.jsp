@@ -21,7 +21,7 @@
             </header>
             <div class="panel panel-primary">                
                 <div class="panel-body">         
-                    <form:form method="post" commandName="gestionarevaluacion">                            
+                    <form:form method="get" commandName="reporteInquietudes">                            
                         <form:errors path="*" element="div" cssClass="alert alert-danger" />
                         <div class="col-xs-offset-2 col-xs-12 container">                                   
                             <p> 

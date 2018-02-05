@@ -167,9 +167,9 @@
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-              <div class="hover-bg"> <a href="<c:url value="/assets/img/portfolio/04.jpg"/>" rel="prettyPhoto">
+              <div class="hover-bg"> <a href="generarReporteInquietudesFrecuentes.htm">Generar Reporte Inquietudes frecuentes</a><br>
               <div class="hover-text">
-                <h4>Project Title</h4>
+                <h4>Reporte inquietudes Frecuentes</h4>
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
