@@ -162,7 +162,7 @@
                 <small>Web Design</small>
                 <div class="clearfix"></div>
               </div>
-              <img src="<c:url value="/assets/img/portfolio/01.jpg"/>" class="img-responsive" alt="Publicar Inquietud"> </a> </div>
+              <img src="<c:url value="/assets/img/portfolio/09.jpg"/>" class="img-responsive" alt="Publicar Inquietud"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">

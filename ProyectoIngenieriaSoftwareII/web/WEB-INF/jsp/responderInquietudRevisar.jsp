@@ -54,10 +54,10 @@
                                         <td><c:out value="${respuestas.fechaPublicacion}" /></td>
                                         <td><c:out value="${respuestas.nombre}" /></td>
                                         <td><c:out value="${respuestas.correo}" /></td>
-
                                         <td>
-                                            <button href="<c:url value="responderInquietud.htm?codigo=${respuestas.idInquietud}" />"  class="btn boxed-action"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                            <button href="<c:url value="generarReporteInquietudesFrecuentes.htm"></c:url>"class="btn boxed-action" id="responder-inquietud"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+                                            <button href="<c:url value="generarReporteInquietudesFrecuentes.htm"></c:url>"class="btn boxed-action" id="responder-inquietud"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                            <a href="responderInquietud.htm?codigo=${respuestas.idInquietud}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+
                                             </a>
                                         </td>
                                     </tr>
