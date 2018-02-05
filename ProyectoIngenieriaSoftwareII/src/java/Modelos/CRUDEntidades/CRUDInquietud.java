@@ -82,6 +82,12 @@ public class CRUDInquietud {
         int result = this.jdbcTemplate.update(sql);
         return result;         
     }
+    
+    public List reporteInquietudesFrecuentes(){
+        this.sql = "select codigoasignatura,tema,descripcion,fechapublicacion from inquietud group by codigoasignatura";
+        List datos = this.jdbcTemplate.queryForList(sql);
+        return datos;
+    }
                 
     
     

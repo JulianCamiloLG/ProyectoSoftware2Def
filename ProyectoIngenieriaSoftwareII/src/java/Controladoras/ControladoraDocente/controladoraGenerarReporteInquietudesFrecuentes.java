@@ -5,7 +5,11 @@
  */
 package Controladoras.ControladoraDocente;
 
+import Modelos.Entidades.Inquietud;
 import Modelos.Entidades.RespuestaInquietud;
+import Modelos.CRUDEntidades.CRUDInquietud;
+import java.util.LinkedList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,17 +22,23 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class controladoraGenerarReporteInquietudesFrecuentes {
+    private CRUDInquietud crudInq;
+    
     @RequestMapping(value = "generarReporteInquietudesFrecuentes.htm", method = RequestMethod.GET)
     public ModelAndView form(HttpServletRequest request)
     {
         ModelAndView mav = new ModelAndView();
-        System.out.println("Llego a control");
-//        String fechaRespuesta = request.getParameter("fechaRespuesta");
-//        String horaRespuesta = request.getParameter("horaInicioRespuesta");
-//        System.out.println("esto tiene fecha: "+fechaRespuesta);
-//        System.out.println("esto tiene hora: "+horaRespuesta);
+        LinkedList<String> uno = new LinkedList<>();
+        LinkedList<LinkedList> dos= new LinkedList<>();
+        uno.add("1");
+        uno.add("lenguajes");
+        uno.add("Lexico");
+        uno.add("duro");
+        uno.add("nulo");
+        dos.add(uno);
+//        List<Inquietud> datos = this.crudInq.reporteInquietudesFrecuentes();
+        mav.addObject("inquietudesFrecuentes", dos);
         mav.setViewName("generarReporteInquietudesFrecuentes");
-        mav.addObject("respuestas", new RespuestaInquietud());
         return mav;
     }
     

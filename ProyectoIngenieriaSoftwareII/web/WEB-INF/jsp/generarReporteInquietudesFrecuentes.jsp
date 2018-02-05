@@ -33,7 +33,6 @@
                             </p>                                    
                         </div> 
                         <h1 align="center">
-                            <button class="btn btn-primary" type="submit" id="btnReporte" name="btnReporte"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Generar</button> 
                         </h1>
                         <div class="col-xs-offset-0 col-xs-12">
                             <hr>
@@ -41,20 +40,23 @@
                         <table class="table table-bordered table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <!--<th>#</th>-->
+                                    <th>Asignatura</th>
                                     <th>Tema</th>
                                     <th>Descripcion</th>
                                     <th>Fecha de publicación</th>
                                 </tr>
                             </thead>                             
                             <tbody>
-                                <c:forEach items="${inquietud}" var="inq">
+                                <c:forEach items="${inquietud}" var="inquietudesFrecuentes">
                                     <tr>
-                                        <td><c:out value="${inq.posicion}" /></td>
-                                        <td><c:out value="${inq.tema}" /></td>
-                                        <td><c:out value="${inq.descripcion}" /></td>
-                                        <td><c:out value="${inq.fechaPublicacion}" /></td>                                    </tr>
-                                    </c:forEach>
+                                        <td><c:out value="${inquietudesFrecuente.posicion}" /></td>
+                                        <td><c:out value="${inquietudesFrecuente.asignatura}"/></td>
+                                        <td><c:out value="${inquietudesFrecuente.tema}" /></td>
+                                        <td><c:out value="${inquietudesFrecuente.descripcion}" /></td>
+                                        <td><c:out value="${inquietudesFrecuente.fechaPublicacion}" /></td>        
+                                    </tr>
+                                </c:forEach>
                             </tbody>
                         </table>
                     </form:form>
