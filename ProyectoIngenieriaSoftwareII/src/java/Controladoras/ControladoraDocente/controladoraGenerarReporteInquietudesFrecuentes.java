@@ -27,17 +27,33 @@ public class controladoraGenerarReporteInquietudesFrecuentes {
     @RequestMapping(value = "generarReporteInquietudesFrecuentes.htm", method = RequestMethod.GET)
     public ModelAndView form(HttpServletRequest request)
     {
+        this.crudInq = new CRUDInquietud();
         ModelAndView mav = new ModelAndView();
-        LinkedList<String> uno = new LinkedList<>();
-        LinkedList<LinkedList> dos= new LinkedList<>();
-        uno.add("1");
-        uno.add("lenguajes");
-        uno.add("Lexico");
-        uno.add("duro");
-        uno.add("nulo");
-        dos.add(uno);
-//        List<Inquietud> datos = this.crudInq.reporteInquietudesFrecuentes();
-        mav.addObject("inquietudesFrecuentes", dos);
+        Inquietud nueva = new Inquietud();
+        nueva.setCodigoEstudiante(1234);
+        nueva.setCodigoidAsignatura("12345");
+        nueva.setDescripcion("Hola");
+        //nueva.setFechaPublicacion("25 enero 2017");
+        nueva.setIdInquietud(12);
+        nueva.setTema("este");
+        Inquietud nueva2 = new Inquietud();
+        nueva2.setCodigoEstudiante(1234);
+        nueva2.setCodigoidAsignatura("12345");
+        nueva2.setDescripcion("Hola");
+        //nueva.setFechaPublicacion("25 enero 2017");
+        nueva2.setIdInquietud(12);
+        nueva2.setTema("este");
+        LinkedList<Inquietud> uno = new LinkedList<>();
+        uno.add(nueva);
+        uno.add(nueva2);
+        List<Inquietud> datos;
+//        uno.add("1");
+//        uno.add("lenguajes");
+//        uno.add("Lexico");
+//        uno.add("duro");
+//        uno.add("nulo");
+        datos = this.crudInq.reporteInquietudesFrecuentes();
+        mav.addObject("inquietudesFrecuentes", datos);
         mav.setViewName("generarReporteInquietudesFrecuentes");
         return mav;
     }
