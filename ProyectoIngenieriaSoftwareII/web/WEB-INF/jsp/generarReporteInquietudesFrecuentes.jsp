@@ -48,13 +48,14 @@
                                 </tr>
                             </thead>                             
                             <tbody>
-                                <c:forEach items="${inquietud}" var="inquietudesFrecuentes">
+                                <c:out value="El valor es: ${inquietud}"></c:out>
+                                <c:forEach items="${inquietudesFrecuentes}" var="inquietudesFrecuentes">
                                     <tr>
-                                        <td><c:out value="${inquietudesFrecuente.posicion}" /></td>
-                                        <td><c:out value="${inquietudesFrecuente.asignatura}"/></td>
-                                        <td><c:out value="${inquietudesFrecuente.tema}" /></td>
-                                        <td><c:out value="${inquietudesFrecuente.descripcion}" /></td>
-                                        <td><c:out value="${inquietudesFrecuente.fechaPublicacion}" /></td>        
+                                        <td><c:out value="${inquietudesFrecuentes.codigoidAsignatura}" /></td>
+                                        <td><c:out value="${inquietudesFrecuentes.tema}" /></td>
+                                        <td><c:out value="${inquietudesFrecuentes.descripcion}" /></td>
+                                        <td><c:out value="${inquietudesFrecuentes.idInquietud}" /></td>
+                                             
                                     </tr>
                                 </c:forEach>
                             </tbody>

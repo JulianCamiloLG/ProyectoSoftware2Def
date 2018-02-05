@@ -50,7 +50,7 @@ public class CRUDInquietudTest {
     public void testIngresarInquietudCorrecto() throws ParseException {
         System.out.println("IngresarInquietud");
         int codigoestudiante = 1234;
-        int codigoasignatura =3214;
+        String codigoasignatura ="3214";
         String tema = "direccionamiento";
         String descrip = "no entiendo ipv6";
         String date = "2006-05-26";
@@ -101,7 +101,7 @@ public class CRUDInquietudTest {
         System.out.println("editarInquietud");
         int idinquietud = 0;
         int codigoestudiante = 0;
-        int codigoasignatura = 0;
+        String codigoasignatura = "0";
         String tema = "";
         String descrip = "";
         String date = "";

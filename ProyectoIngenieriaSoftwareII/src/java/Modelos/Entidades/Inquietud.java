@@ -19,7 +19,7 @@ public class Inquietud
 {
     private int idInquietud;
     private int codigoEstudiante;
-    private int codigoidAsignatura;
+    private String codigoidAsignatura;
     private String tema;
     private String Descripcion;
     private Date fechaPublicacion;
@@ -38,7 +38,7 @@ public class Inquietud
      * @param fechaPublicacion 
      * @throws java.text.ParseException 
      */
-    public Inquietud(int idInquietud, int codigoEstudiante, int codigoidAsignatura, String tema, String Descripcion, String fechaPublicacion) throws ParseException
+    public Inquietud(int idInquietud, int codigoEstudiante, String codigoidAsignatura, String tema, String Descripcion, String fechaPublicacion) throws ParseException
     {
         this.idInquietud = idInquietud;
         this.codigoEstudiante = codigoEstudiante;
@@ -84,7 +84,7 @@ public class Inquietud
     /**
      * @return the codigoidAsignatura
      */
-    public int getCodigoidAsignatura()
+    public String getCodigoidAsignatura()
     {
         return codigoidAsignatura;
     }
@@ -92,7 +92,7 @@ public class Inquietud
     /**
      * @param codigoidAsignatura the codigoidAsignatura to set
      */
-    public void setCodigoidAsignatura(int codigoidAsignatura)
+    public void setCodigoidAsignatura(String codigoidAsignatura)
     {
         this.codigoidAsignatura = codigoidAsignatura;
     }

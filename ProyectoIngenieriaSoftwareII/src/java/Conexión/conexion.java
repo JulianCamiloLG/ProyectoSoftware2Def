@@ -19,7 +19,8 @@ public class conexion
         datos.setDriverClassName("com.mysql.jdbc.Driver");
         datos.setUrl("jdbc:mysql://localhost/bemonitorfinal");
         datos.setUsername("root");
-        datos.setPassword("Admin-1234");
+        datos.setPassword("admin");
+
         return datos;
     }
 

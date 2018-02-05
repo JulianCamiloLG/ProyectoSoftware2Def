@@ -15,6 +15,7 @@ import java.util.List;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 
 /**
@@ -33,7 +34,7 @@ public class CRUDInquietud {
         this.sql= "";
     }
     
-    public int IngresarInquietud(int codigoestudiante, int codigoasignatura,String tema, String descrip, String date) throws ParseException{
+    public int IngresarInquietud(int codigoestudiante, String codigoasignatura,String tema, String descrip, String date) throws ParseException{
         Inquietud nuevainquietud = new Inquietud(0,codigoestudiante,codigoasignatura,tema,descrip,date);
         this.sql="insert into inquietud(idinquietud,codigoestudiante,codigoasignatura,tema,descripcion,fechapublicacion) values (0,"+nuevainquietud.getCodigoEstudiante()+","+nuevainquietud.getCodigoidAsignatura()+","+nuevainquietud.getTema()+","+nuevainquietud.getDescripcion()+","+nuevainquietud.getFechaPublicacion()+");";
         int resul=this.jdbcTemplate.update(sql);
@@ -50,7 +51,7 @@ public class CRUDInquietud {
                         Inquietud aux = new Inquietud();
                         aux.setIdInquietud(rs.getInt(1));
                         aux.setCodigoEstudiante(rs.getInt(2));
-                        aux.setCodigoidAsignatura(rs.getInt(3));
+                        aux.setCodigoidAsignatura(rs.getString(3));
                         aux.setTema(rs.getString(4));
                         aux.setDescripcion(rs.getString(5));
                         aux.setFechaPublicacion(rs.getString(6));
@@ -68,7 +69,7 @@ public class CRUDInquietud {
     }
     
     
-    public int editarInquietud(int idinquietud,int codigoestudiante, int codigoasignatura,String tema, String descrip, String date) throws ParseException{
+    public int editarInquietud(int idinquietud,int codigoestudiante, String codigoasignatura,String tema, String descrip, String date) throws ParseException{
         Inquietud nuevainquietud = new Inquietud(10,codigoestudiante,codigoasignatura,tema,descrip,date);
         this.sql="update inquietud set codigoestudiante="+nuevainquietud.getCodigoEstudiante()+",codigoasignatura="+nuevainquietud.getCodigoidAsignatura()
                 +",tema="+nuevainquietud.getTema()+",descripcion="+nuevainquietud.getDescripcion()+",fechapublicacion="+nuevainquietud.getFechaPublicacion()
@@ -84,8 +85,21 @@ public class CRUDInquietud {
     }
     
     public List reporteInquietudesFrecuentes(){
-        this.sql = "select codigoasignatura,tema,descripcion,fechapublicacion from inquietud group by codigoasignatura";
-        List datos = this.jdbcTemplate.queryForList(sql);
+        this.sql = "select codigoasignatura,tema,descripcion,fechaPublicacion from inquietud;";
+        List<Inquietud> datos = this.jdbcTemplate.query(sql, new RowMapper<Inquietud>() {
+            @Override
+            public Inquietud mapRow(ResultSet rs, int i) throws SQLException {
+                //To change body of generated methods, choose Tools | Templates.
+                System.out.println(rs);
+                Inquietud nueva = new Inquietud();
+                nueva.setCodigoidAsignatura(rs.getString("codigoasignatura"));
+                nueva.setTema(rs.getString("tema"));
+                nueva.setDescripcion(rs.getString("descripcion"));
+                nueva.setFechaPublicacion(rs.getDate("fechaPublicacion").toString());
+                return nueva;
+            }
+        });
+        
         return datos;
     }
                 
