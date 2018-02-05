@@ -90,7 +90,6 @@ public class CRUDInquietud {
             @Override
             public Inquietud mapRow(ResultSet rs, int i) throws SQLException {
                 //To change body of generated methods, choose Tools | Templates.
-                System.out.println(rs);
                 Inquietud nueva = new Inquietud();
                 nueva.setCodigoidAsignatura(rs.getString("codigoasignatura"));
                 nueva.setTema(rs.getString("tema"));

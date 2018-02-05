@@ -9,6 +9,7 @@ import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.Entidades.Estudiante;
 import Modelos.Entidades.Inquietud;
 import Modelos.Entidades.RespuestaInquietud;
+import Modelos.OperacionesEstudianteMonitor.OperacionResponderInquietud;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -24,18 +25,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class controladoraResponderInquietud
 {
-    
-    CRUDInquietud crudhandler;
+    OperacionResponderInquietud responder;
     
     /**
-     * 
-     * @param request
-     * @return 
+     * Metodo para repsonder una inquietud
+     * @param request los valores enviados desde la vista por metodo get
+     * @return un nuevo modelAndView direccionando aresponderInquietud.jsp
      */
     @RequestMapping(value = "responderInquietud.htm", method = RequestMethod.GET)
     public ModelAndView form(HttpServletRequest request)
     {
-        System.out.println("entre al segundo request");
         ModelAndView mav = new ModelAndView();
         String fechaRespuesta = request.getParameter("fechaRespuesta");
         String horaRespuesta = request.getParameter("horaInicioRespuesta"); 
@@ -44,12 +43,16 @@ public class controladoraResponderInquietud
         return mav;
     }
     
+    
+    /**
+     * Metodo para listar las inquietudes que el usuario puede responder
+     * @return un nuevo ModelAndView con los datos de las inquietudes
+     */
     @RequestMapping(value = "responderInquietudRevisar.htm", method = RequestMethod.GET)
     public ModelAndView form(){
-        System.out.println("entre al primer request");
-        this.crudhandler= new CRUDInquietud();
+        this.responder= new OperacionResponderInquietud();
         ModelAndView mav = new ModelAndView();
-        List<Inquietud> inquietudes = crudhandler.consultarTodas();
+        List<Inquietud> inquietudes = responder.consultarTodas();
         mav.setViewName("responderInquietudRevisar");
         mav.addObject("respuestas", inquietudes);
         return mav;

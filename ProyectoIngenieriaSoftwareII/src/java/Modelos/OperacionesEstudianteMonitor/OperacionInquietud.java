@@ -50,5 +50,11 @@ public class OperacionInquietud {
         int result=nuevainquietud.editarInquietud(idinquietud,codigoestudiante, codigoasignatura, tema, descp, dataformat.toString());
         return result;
     }
+
+    public List<Inquietud> reporteInquietudesFrecuentes() {
+        CRUDInquietud reporte = new CRUDInquietud();
+        List<Inquietud> inquietudes = reporte.reporteInquietudesFrecuentes();
+        return inquietudes;
+    }
     
 }

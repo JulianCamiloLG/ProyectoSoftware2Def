@@ -12,7 +12,7 @@ package Modelos.Entidades;
 public class RespuestaInquietud {
 
     private int idInquetud,codigoEstudiante,idRespuesta;
-    private String respuesta;
+    private String respuesta,correoEstudiante,nombreEstudiante;
     private boolean estado;
     
     public RespuestaInquietud() {
@@ -94,6 +94,34 @@ public class RespuestaInquietud {
      */
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+
+    /**
+     * @return the correoEstudiante
+     */
+    public String getCorreoEstudiante() {
+        return correoEstudiante;
+    }
+
+    /**
+     * @param correoEstudiante the correoEstudiante to set
+     */
+    public void setCorreoEstudiante(String correoEstudiante) {
+        this.correoEstudiante = correoEstudiante;
+    }
+
+    /**
+     * @return the nombreEstudiante
+     */
+    public String getNombreEstudiante() {
+        return nombreEstudiante;
+    }
+
+    /**
+     * @param nombreEstudiante the nombreEstudiante to set
+     */
+    public void setNombreEstudiante(String nombreEstudiante) {
+        this.nombreEstudiante = nombreEstudiante;
     }
     
     

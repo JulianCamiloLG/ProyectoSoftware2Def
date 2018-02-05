@@ -5,13 +5,12 @@
  */
 package Modelos.OperacionesEstudianteMonitor;
 
+import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.CRUDEntidades.CRUDRespuestaInquietud;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import javax.json.Json;
+import Modelos.Entidades.Inquietud;
+import Modelos.Entidades.RespuestaInquietud;
+import java.util.List;
 import javax.json.JsonArray;
-import javax.json.JsonReader;
 import javax.json.JsonValue;
 
 /**
@@ -21,6 +20,7 @@ import javax.json.JsonValue;
 public class OperacionResponderInquietud
 {
     private CRUDRespuestaInquietud nuevaRespuesta;
+    private CRUDInquietud inquietudes;
     
     public OperacionResponderInquietud() {
         this.nuevaRespuesta= new CRUDRespuestaInquietud();
@@ -60,6 +60,12 @@ public class OperacionResponderInquietud
     private boolean actualizarEstadoInquietud(String idInquietud, boolean cambiadoA) {
         boolean result =nuevaRespuesta.actualizar(Integer.parseInt(idInquietud),cambiadoA);
         return result;
+    }
+
+    public List<Inquietud> consultarTodas() {
+        this.inquietudes= new CRUDInquietud();
+        List<Inquietud> respuestas=this.inquietudes.consultarTodas();
+        return respuestas;
     }
     
     
