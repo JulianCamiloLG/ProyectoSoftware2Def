@@ -156,7 +156,7 @@
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-              <div class="hover-bg"> <a  href="responderInquietud.htm">Responder Inquietud</a><br>
+              <div class="hover-bg"> <a  href="responderInquietudRevisar.htm">Responder Inquietud</a><br>
               <div class="hover-text">
                 <h4>Publicar inquietud</h4>
                 <small>Web Design</small>

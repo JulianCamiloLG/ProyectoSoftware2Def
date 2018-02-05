@@ -5,8 +5,11 @@
  */
 package Controladoras.ControladoraMonitor;
 
+import Modelos.CRUDEntidades.CRUDInquietud;
 import Modelos.Entidades.Estudiante;
+import Modelos.Entidades.Inquietud;
 import Modelos.Entidades.RespuestaInquietud;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -21,18 +24,35 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class controladoraResponderInquietud
 {
-
+    
+    CRUDInquietud crudhandler;
+    
+    /**
+     * 
+     * @param request
+     * @return 
+     */
     @RequestMapping(value = "responderInquietud.htm", method = RequestMethod.GET)
     public ModelAndView form(HttpServletRequest request)
     {
+        System.out.println("entre al segundo request");
         ModelAndView mav = new ModelAndView();
         String fechaRespuesta = request.getParameter("fechaRespuesta");
-        String horaRespuesta = request.getParameter("horaInicioRespuesta");
-        System.out.println("esto tiene fecha: "+fechaRespuesta);
-        System.out.println("esto tiene hora: "+horaRespuesta);
+        String horaRespuesta = request.getParameter("horaInicioRespuesta"); 
         mav.setViewName("responderInquietud");
         mav.addObject("respuestas", new RespuestaInquietud());
         return mav;
     }
-
+    
+    @RequestMapping(value = "responderInquietudRevisar.htm", method = RequestMethod.GET)
+    public ModelAndView form(){
+        System.out.println("entre al primer request");
+        this.crudhandler= new CRUDInquietud();
+        ModelAndView mav = new ModelAndView();
+        List<Inquietud> inquietudes = crudhandler.consultarTodas();
+        mav.setViewName("responderInquietudRevisar");
+        mav.addObject("respuestas", inquietudes);
+        return mav;
+    }
+    
 }

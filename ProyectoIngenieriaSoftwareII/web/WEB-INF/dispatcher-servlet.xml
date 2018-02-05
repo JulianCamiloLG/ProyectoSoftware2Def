@@ -37,6 +37,7 @@
                 Responder inquietud
                 --> 
                 <prop key="responderInquietud.htm">controladoraResponderInquietud</prop>
+                 <prop key="responderInquietudRevisar.htm">controladoraResponderInquietud</prop>
                 <!--
                 Generar Reporte Inquietudes frecuentes
                 -->

@@ -21,7 +21,7 @@
             </header>
             <div class="panel panel-primary">                
                 <div class="panel-body">                                          
-                    <form:form method="post" commandName="gestionarevaluacion">                            
+                    <form:form method="GET" commandName="gestionarevaluacion">                            
                         <form:errors path="*" element="div" cssClass="alert alert-danger" />
                         <div class="col-xs-offset-2 col-xs-12 container">                                   
                             <p> 
@@ -47,17 +47,17 @@
                                 </tr>
                             </thead>                             
                             <tbody>
-                                <c:forEach items="${inquietud}" var="inq">
+                                <c:forEach items="${respuestas}" var="respuestas">
                                     <tr>
-                                        <td><c:out value="${inq.tema}" /></td>
-                                        <td><c:out value="${inq.descripcion}" /></td>
-                                        <td><c:out value="${inq.fechaPublicacion}" /></td>
-                                        <td><c:out value="${inq.nombre}" /></td>
-                                        <td><c:out value="${inq.correo}" /></td>
+                                        <td><c:out value="${respuestas.tema}" /></td>
+                                        <td><c:out value="${respuestas.descripcion}" /></td>
+                                        <td><c:out value="${respuestas.fechaPublicacion}" /></td>
+                                        <td><c:out value="${respuestas.nombre}" /></td>
+                                        <td><c:out value="${respuestas.correo}" /></td>
 
                                         <td>
-                                            <button href="<c:url value="gestionarEvaluacionParaMonitorEditar.htm?codigo=${inq.idInquietud}" />"  class="btn boxed-action"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                            <button href="#" class="btn boxed-action" id="responder-inquietud"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+                                            <button href="<c:url value="responderInquietud.htm?codigo=${respuestas.idInquietud}" />"  class="btn boxed-action"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                            <button href="<c:url value="generarReporteInquietudesFrecuentes.htm"></c:url>"class="btn boxed-action" id="responder-inquietud"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
                                             </a>
                                         </td>
                                     </tr>
